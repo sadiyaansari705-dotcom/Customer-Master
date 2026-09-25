@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Master</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="logo-section">
+
+            <div class="logo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <div>
+                <h1>Customer Master</h1>
+                <p>Customer Management System</p>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#home" class="active">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+
+            <a href="#customers">
+                <i class="fas fa-users"></i>
+                Customers
+            </a>
+
+            <a href="#about">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="user-section">
+
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div>
+                <strong>Welcome, User</strong>
+                <small>Keep Learning!</small>
+            </div>
+
+            <i class="fas fa-chevron-down"></i>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div id="toast" class="toast">
+
+        <i class="fas fa-check-circle"></i>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-card" id="home">
+
+            <div class="welcome-content">
+
+                <h2>
+                    Welcome to
+                    <span>Customer Master</span>
+                </h2>
+
+                <p>
+                    Manage your customers easily and efficiently.
+                </p>
+
+                <div class="welcome-features">
+
+                    <span>Simple</span>
+                    <b>|</b>
+
+                    <span>Fast</span>
+                    <b>|</b>
+
+                    <span>Reliable</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="welcome-icon">
+
+                <i class="fas fa-user-group"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-container">
+
+
+            <!-- Total Customers -->
+
+            <div class="stat-card total-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <div class="stat-info">
+
+                    <h4>Total Customers</h4>
+
+                    <h2 id="totalCustomers">
+                        0
+                    </h2>
+
+                    <p>All registered customers</p>
+
+                </div>
+
+                <i class="fas fa-chart-line stat-background-icon"></i>
+
+            </div>
+
+
+            <!-- Active Records -->
+
+            <div class="stat-card active-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+
+                <div class="stat-info">
+
+                    <h4>Active Records</h4>
+
+                    <h2 id="activeRecords">
+                        0
+                    </h2>
+
+                    <p>Currently in database</p>
+
+                </div>
+
+                <i class="fas fa-chart-column stat-background-icon"></i>
+
+            </div>
+
+
+            <!-- Added Today -->
+
+            <div class="stat-card added-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+                <div class="stat-info">
+
+                    <h4>Added Today</h4>
+
+                    <h2 id="addedToday">
+                        0
+                    </h2>
+
+                    <p>New customers today</p>
+
+                </div>
+
+                <i class="fas fa-calendar-days stat-background-icon"></i>
+
+            </div>
+
+
+            <!-- Deleted Records -->
+
+            <div class="stat-card deleted-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-trash"></i>
+                </div>
+
+                <div class="stat-info">
+
+                    <h4>Deleted Records</h4>
+
+                    <h2 id="deletedRecords">
+                        0
+                    </h2>
+
+                    <p>Removed from database</p>
+
+                </div>
+
+                <i class="fas fa-trash-can stat-background-icon"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WORK AREA ================= -->
+
+        <section class="work-area">
+
+
+            <!-- ================= FORM ================= -->
+
+            <div class="form-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            <i class="fas fa-user-plus"></i>
+                            Add / Edit Customer
+                        </h2>
+
+                        <p>
+                            Enter customer details below
+                        </p>
+
+                    </div>
+
+                    <span class="form-header-text">
+                        Fill in the details below
+                    </span>
+
+                </div>
+
+
+                <div class="form-content">
+
+
+                    <!-- First Name -->
+
+                    <div class="input-group">
+
+                        <label>
+                            First Name <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fas fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="Enter first name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Last Name -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Last Name <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fas fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Enter last name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Email <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fas fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter email"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Phone <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fas fa-phone"></i>
+
+                            <input
+                                type="text"
+                                id="phone"
+                                placeholder="Enter phone number"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="input-group full-width">
+
+                        <label>
+                            Address <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="address"
+                                placeholder="Enter address"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hidden Update ID -->
+
+                    <input
+                        type="hidden"
+                        id="updateId"
+                    >
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <button
+                            class="btn btn-add"
+                            onclick="addCustomer()"
+                        >
+
+                            <i class="fas fa-plus"></i>
+
+                            Add Customer
+
+                        </button>
+
+
+                        <button
+                            class="btn btn-update"
+                            onclick="updateCustomer()"
+                        >
+
+                            <i class="fas fa-pen"></i>
+
+                            Update Customer
+
+                        </button>
+
+
+                        <button
+                            class="btn btn-clear"
+                            onclick="clearForm()"
+                        >
+
+                            <i class="fas fa-rotate"></i>
+
+                            Clear Form
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CUSTOMER LIST ================= -->
+
+            <div class="customer-section" id="customers">
+
+
+                <!-- Customer List Header -->
+
+                <div class="customer-header">
+
+                    <div>
+
+                        <h2>
+
+                            <i class="fas fa-table"></i>
+
+                            Customer List
+
+                        </h2>
+
+                        <p>
+                            Manage your registered customers
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="view-button"
+                        onclick="getCustomers()"
+                    >
+
+                        <i class="fas fa-eye"></i>
+
+                        View Customers
+
+                    </button>
+
+                </div>
+
+
+                <!-- Search -->
+
+                <div class="search-section">
+
+                    <div class="search-box">
+
+                        <i class="fas fa-search"></i>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search by name, email or phone..."
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="search-button"
+                        onclick="searchCustomers()"
+                    >
+
+                        <i class="fas fa-search"></i>
+
+                        Search
+
+                    </button>
+
+                </div>
+
+
+                <!-- Customer Table -->
+
+                <div
+                    class="table-container"
+                    id="customerList"
+                >
+
+                    <!-- JavaScript will load customers here -->
+
+                </div>
+
+
+                <!-- Pagination -->
+
+                <div
+                    class="pagination-container"
+                    id="pagination"
+                >
+
+                    <!-- JavaScript will create pagination here -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+     ACTIVITY HISTORY
+========================= -->
+
+<section class="activity-section" id="activity">
+
+    <!-- Activity Header -->
+
+    <div class="activity-header">
+
+        <div>
+
+            <h2>
+                <i class="fas fa-clock-rotate-left"></i>
+                Activity History
+            </h2>
+
+            <p>
+                Track all customer related activities (Add / Delete).
+            </p>
+
+        </div>
+
+
+        <button
+            class="activity-refresh-button"
+            onclick="getActivityHistory()"
+        >
+
+            <i class="fas fa-rotate"></i>
+
+            Refresh
+
+        </button>
+
+    </div>
+
+
+    <!-- Activity Search -->
+
+    <div class="activity-search-section">
+
+        <div class="activity-search-box">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="activitySearchInput"
+                placeholder="Search by customer name, ID or activity..."
+                onkeyup="searchActivities()"
+            >
+
+        </div>
+
+
+        <button
+            class="activity-search-button"
+            onclick="searchActivities()"
+        >
+
+            <i class="fas fa-search"></i>
+
+            Search
+
+        </button>
+
+    </div>
+
+
+    <!-- Activity Table -->
+
+    <div class="activity-table-container">
+
+        <table class="activity-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Customer ID</th>
+
+                    <th>Customer Name</th>
+
+                    <th>Activity</th>
+
+                    <th>Activity Time</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="activityHistory">
+
+                <!-- JavaScript will load activity history here -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- Activity Pagination -->
+
+    <div
+        class="activity-pagination"
+        id="activityPagination"
+    >
+
+        <!-- JavaScript will create pagination here -->
+
+    </div>
+
+</section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <h2>
+
+                <i class="fas fa-circle-info"></i>
+
+                About Customer Master
+
+            </h2>
+
+            <p>
+
+                Customer Master is a simple customer management system
+                developed using HTML, CSS, JavaScript, Spring Boot,
+                REST API, JPA and Oracle Database.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div>
+
+            © 2026 <strong>Customer Master</strong>
+
+            <span>|</span>
+
+            Customer Management System ❤️
+
+        </div>
+
+
+        <div>
+
+            Built with ☕ for a Better Tomorrow
+
+            <span>|</span>
+
+            Keep Learning, Keep Growing!
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
