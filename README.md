@@ -142,32 +142,36 @@ CustomerRepository
  ↓
 Oracle Database
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 Customer-Master/
 │
 ├── backend/
-│   │
 │   ├── src/
 │   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── customermaster/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           ├── Customer.java
-│   │   │   │           ├── CustomerActivity.java
-│   │   │   │           ├── CustomerStatistics.java
-│   │   │   │           └── CustomermasterApplication.java
-│   │   │   │
-│   │   │   └── resources/
-│   │   │       └── application.properties
+│   │   │   └── java/
+│   │   │       └── com/
+│   │   │           └── customermaster/
+│   │   │               ├── controller/
+│   │   │               │   └── CustomerController.java
+│   │   │               │
+│   │   │               ├── repository/
+│   │   │               │   ├── CustomerRepository.java
+│   │   │               │   └── CustomerActivityRepository.java
+│   │   │               │
+│   │   │               ├── service/
+│   │   │               │   └── CustomerService.java
+│   │   │               │
+│   │   │               ├── Customer.java
+│   │   │               ├── CustomerActivity.java
+│   │   │               ├── CustomerStatistics.java
+│   │   │               └── CustomermasterApplication.java
 │   │   │
 │   │   └── test/
 │   │
 │   ├── build.gradle
 │   ├── gradlew
+│   ├── gradlew.bat
 │   └── settings.gradle
 │
 ├── frontend/
